@@ -3,7 +3,15 @@
 import sys
 
 def making_change(amount, denominations):
-  pass 
+    coins = [1, 5, 10, 25, 50]
+    cache = {}
+    cache[0] = 1
+
+    if amount < coins[1]:
+        return 1
+
+    if amount < coins[2]:
+        return 2 
 
 
 if __name__ == "__main__":
