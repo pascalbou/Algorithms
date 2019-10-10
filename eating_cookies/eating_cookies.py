@@ -7,18 +7,17 @@ import sys
 # recursive solution
 
 
-def eating_cookies(n, cache=0):
-    if n <= 0 or n == 1:
+def eating_cookies(n, cache={}):
+    if n <= 1:
         return 1
 
     if n == 2:
         return 2
 
-    if n == 3:
-        return 4
+    if str(n) not in cache:
+        cache[str(n)] = eating_cookies(n-3) + eating_cookies(n-2) + eating_cookies(n-1)
 
-    else:
-        return eating_cookies(n-1) + eating_cookies(n-2) + eating_cookies(n-3)
+    return cache[str(n)]
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
