@@ -17,36 +17,7 @@ def rock_paper_scissors(n):
     result = [[] for i in range(3**n)]
     rps = ['rock', 'paper', 'scissors']
 
-
     # n=3
-
-    result[0].append(rps[0])
-    result[1].append(rps[0])
-    result[2].append(rps[0])
-    result[3].append(rps[0])
-    result[4].append(rps[0])
-    result[5].append(rps[0])
-    result[6].append(rps[0])
-    result[7].append(rps[0])
-    result[8].append(rps[0])
-    result[9].append(rps[0])
-    result[10].append(rps[1])
-    result[11].append(rps[1])
-    result[12].append(rps[1])
-    result[13].append(rps[1])
-    result[14].append(rps[1])
-    result[15].append(rps[1])
-    result[16].append(rps[1])
-    result[17].append(rps[1])
-    result[18].append(rps[2])
-    result[19].append(rps[2])
-    result[20].append(rps[2])
-    result[21].append(rps[2])
-    result[22].append(rps[2])
-    result[23].append(rps[2])
-    result[24].append(rps[2])
-    result[25].append(rps[2])
-    result[26].append(rps[2])
 
     result[0].append(rps[0])
     result[1].append(rps[0])
@@ -132,7 +103,6 @@ def rock_paper_scissors(n):
     result[25].append(rps[1])
     result[26].append(rps[2])
 
-
     # n=2
     result[0].append(rps[0])
     result[1].append(rps[0])
@@ -153,7 +123,6 @@ def rock_paper_scissors(n):
     result[6].append(rps[0])
     result[7].append(rps[1])
     result[8].append(rps[2])
-
 
     # n=1
     result[0].append(rps[0])
