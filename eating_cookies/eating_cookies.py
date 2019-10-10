@@ -15,9 +15,14 @@ def eating_cookies(n, cache={}):
         return 2
 
     if str(n) not in cache:
-        cache[str(n)] = eating_cookies(n-3) + eating_cookies(n-2) + eating_cookies(n-1)
+        cache[str(n)] = eating_cookies(n-3) + \
+            eating_cookies(n-2) + eating_cookies(n-1)
 
+    cache.pop(str(n-3), None)
+
+    # print(cache)
     return cache[str(n)]
+
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
