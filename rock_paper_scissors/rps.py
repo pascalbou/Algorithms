@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import sys
+import math
 
 # 3 choices to power of n
 # create empty list this long
@@ -12,8 +13,15 @@ import sys
 # append to list each item
 
 def rock_paper_scissors(n):
-  pass 
+    result = [[] for i in range(3**n)]
+    rps = ['rock', 'paper', 'scissors']
 
+    for a in range(len(result)):     
+        result[a].append(rps[math.floor(a/3)])
+        result[a].append(rps[a%3])
+
+    # print(result)
+    return result
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:
